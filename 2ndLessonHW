@@ -1,0 +1,100 @@
+package ru.GeekBrains;
+
+import java.util.Arrays;
+
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+       InvertArray();
+       FillArray();
+       changeArray();
+       squareArray();
+       MinMaxArray();
+    }
+        static void InvertArray()
+    {
+        int[] Num1 = new int[10];
+        Num1[0] = 1;
+        Num1[1] = 1;
+        Num1[2] = 0;
+        Num1[3] = 0;
+        Num1[4] = 1;
+        Num1[5] = 0;
+        Num1[6] = 1;
+        Num1[7] = 1;
+        Num1[8] = 0;
+        Num1[9] = 0;
+        for (int i = 0; i < Num1.length; i++) {
+            if (Num1[i] == 1) {
+                Num1[i] = Num1[i]-1;
+            } else {
+                Num1[i] = Num1[i]+1;
+            }
+            System.out.println(Arrays.toString(Num1));
+        }
+    }
+    static void FillArray()
+    {
+     int[] Num2 = new int[8];
+     for (int i = 1; i< Num2.length;i++)
+     {
+         Num2[i] = i*3;
+
+     }
+     System.out.println(Arrays.toString(Num2));
+    }
+    static void changeArray()
+        {
+            int[] Num3 ={1,5,3,2,11,4,5,2,4,8,9,1};
+            for (int i=0;i< Num3.length;i++)
+            {
+                if (Num3[i]<6)
+                {
+                   Num3[i]= Num3[i] * 2;
+                }
+                System.out.println(Arrays.toString(Num3));
+
+            }
+        }
+    static void squareArray()
+    {
+        int[][] Num4= new int[4][4];
+        for (int i = 0;i<4;i++)
+        {
+            for (int j = 0;j<4;j++)
+            {
+                if (j == i)
+                {
+                    Num4[i][j]=1;
+                }
+            }
+        }
+        System.out.println(Arrays.deepToString(Num4));
+    }
+    static void MinMaxArray()
+    {
+        int[] Num5 = {-1,0,-2,3,4,5,-6};
+        int min = 0;
+        for (int i = 0; i< Num5.length;i++)
+        {
+            if (Num5[i]<min)
+            {
+                min = Num5[i];
+            }
+        }
+        System.out.println(Arrays.toString(Num5));
+        System.out.println(min);
+        int max = 0;
+        for (int i = 0; i< Num5.length;i++)
+        {
+            if (Num5[i]>max)
+            {
+                max = Num5[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+}
